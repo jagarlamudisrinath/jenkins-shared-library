@@ -1,0 +1,50 @@
+<freeStyleProject _class="hudson.model.FreeStyleProject">
+<action/>
+<action/>
+<action _class="org.jenkinsci.plugins.displayurlapi.actions.JobDisplayAction"/>
+<action _class="com.cloudbees.plugins.credentials.ViewCredentialsAction"/>
+<description/>
+<displayName>TestJob</displayName>
+<fullDisplayName>TestJob</fullDisplayName>
+<fullName>TestJob</fullName>
+<name>TestJob</name>
+<url>http://localhost:8080/job/TestJob/</url>
+<buildable>true</buildable>
+<build _class="hudson.model.FreeStyleBuild">
+<number>1</number>
+<url>http://localhost:8080/job/TestJob/1/</url>
+</build>
+<color>blue</color>
+<firstBuild _class="hudson.model.FreeStyleBuild">
+<number>1</number>
+<url>http://localhost:8080/job/TestJob/1/</url>
+</firstBuild>
+<healthReport>
+<description>Build stability: No recent builds failed.</description>
+<iconClassName>icon-health-80plus</iconClassName>
+<iconUrl>health-80plus.png</iconUrl>
+<score>100</score>
+</healthReport>
+<inQueue>false</inQueue>
+<keepDependencies>false</keepDependencies>
+<lastBuild _class="hudson.model.FreeStyleBuild">
+<number>1</number>
+<url>http://localhost:8080/job/TestJob/1/</url>
+</lastBuild>
+<lastCompletedBuild _class="hudson.model.FreeStyleBuild">
+<number>1</number>
+<url>http://localhost:8080/job/TestJob/1/</url>
+</lastCompletedBuild>
+<lastStableBuild _class="hudson.model.FreeStyleBuild">
+<number>1</number>
+<url>http://localhost:8080/job/TestJob/1/</url>
+</lastStableBuild>
+<lastSuccessfulBuild _class="hudson.model.FreeStyleBuild">
+<number>1</number>
+<url>http://localhost:8080/job/TestJob/1/</url>
+</lastSuccessfulBuild>
+<nextBuildNumber>2</nextBuildNumber>
+<concurrentBuild>false</concurrentBuild>
+<disabled>false</disabled>
+<scm _class="hudson.scm.NullSCM"/>
+</freeStyleProject>
