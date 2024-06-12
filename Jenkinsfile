@@ -25,18 +25,13 @@ pipeline {
                     // Path to your YAML file
                     def yamlFilePath = 'repo/test.yml'
 
-                    // Verify the file and its path
-                    sh "ls -l repo"
-                    sh "pwd"
+                    def yaml = sh(script: "cat ${yamlFilePath}", returnStdout: true).trim()
+
+                    def result = extractSchedule(yaml)
+                    def database_name = result.database_name
+                    def schedule = result.schedule
                     
-                   // Parse the YAML file and convert to JSON
-                    def database_name = sh(script: "yq e \'.database\' ${yamlFilePath}", returnStdout: true).trim()
-                    // Parse the YAML file and convert to JSON
-                    def schedule = sh(script: "yq e \'.schdeule\' ${yamlFilePath}", returnStdout: true).trim()
-                    echo "database name ${database_name}, ${schedule}"
-                    def folder="myfolder"
-                    def jobname = "myfolder"
-                    createJob(schedule, folder, jobname)
+                    echo "Database name: ${database_name}, Schedule: ${schedule}"
                 }
             }
         }
