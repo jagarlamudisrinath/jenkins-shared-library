@@ -9,4 +9,5 @@ def call(String yamlString) {
     echo "Extracted schedule"
 
     echo "Database name: ${database_name}, Schedule: ${schedule}"
+    return [database_name: database_name, schedule: schedule]
 }
