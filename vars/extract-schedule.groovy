@@ -1,7 +1,8 @@
-def call(String yamlFilePath = "World") {
+def call(String yamlString) {
+    echo "Hello, ${yamlString}"
     // Parse the YAML file and convert to JSON
-    def database_name = sh(script: "echo ${yamlFilePath} | yq e \'.database\'", returnStdout: true).trim()
+    def database_name = sh(script: "echo ${yamlString} | yq e \'.database\'", returnStdout: true).trim()
     // Parse the YAML file and convert to JSON
-    def schedule = sh(script: "echo ${yamlFilePath} | yq e \'.schdeule\'", returnStdout: true).trim()
+    def schedule = sh(script: "echo ${yamlString} | yq e \'.schdeule\'", returnStdout: true).trim()
     echo "database name ${database_name}, ${schedule}"
 }
