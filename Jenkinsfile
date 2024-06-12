@@ -34,6 +34,9 @@ pipeline {
                     // Parse the YAML file and convert to JSON
                     def schedule = sh(script: "yq e \'.schdeule\' ${yamlFilePath}", returnStdout: true).trim()
                     echo "database name ${database_name}, ${schedule}"
+                    def folder="myfolder"
+                    def jobname = "myfolder"
+                    createJob(schedule, folder, jobname)
                 }
             }
         }
