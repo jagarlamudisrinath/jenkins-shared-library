@@ -1,7 +1,7 @@
 def call(String yamlFilePath) {
     def database_name = getFileNameWithoutExtension(yamlFilePath)
     def yaml = sh(script: "cat ${yamlFilePath}", returnStdout: true).trim()
-    def schedule = sh(script: "echo \"${yamlString}\" | yq e '.schdeule' -", returnStdout: true).trim()
+    def schedule = sh(script: "echo \"${yaml}\" | yq e '.schdeule' -", returnStdout: true).trim()
 
 
     echo "Database name: ${database_name}, Schedule: ${schedule}"
